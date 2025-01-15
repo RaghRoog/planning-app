@@ -1,0 +1,187 @@
+@import './styles/variables.scss', 
+        './styles/navbar.scss', 
+        './styles/loginAndRegisterPage.scss', 
+        './styles/carousel.scss',
+        './styles/card.scss',
+        './styles/allGoalsAndTasksPage.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+h1{
+    color: black;
+    font-size: 2rem;
+    @each $property, $value in $f-bold {
+        #{$property}: $value;
+    };
+    margin-bottom: 40px;
+}
+
+h2{
+    color: $primary-color;
+    font-size: 1.8rem;
+    @each $property, $value in $f-bold {
+        #{$property}: $value;
+    };
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar-link{
+    color: $primary-color;
+    font-size: 1.8rem;
+    @each $property, $value in $f-bold {
+        #{$property}: $value;
+    };
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+
+    &:link, &:visited, &:hover, &:active{
+        text-decoration: none;
+        color: $primary-color;
+        @each $property, $value in $f-bold {
+            #{$property}: $value;
+        };
+    }
+}
+
+u{
+    color: $primary-color;
+}
+
+h3{
+    color: black;
+    font-size: 1.3rem;
+    @each $property, $value in $f-bold {
+        #{$property}: $value;
+    };
+    margin-bottom: 3px;
+}
+
+h4{
+    color: black;
+    font-size: 1rem;
+    @each $property, $value in $f-bold {
+        #{$property}: $value;
+    };
+    margin-bottom: 3px;
+}
+
+p, label{
+    color: rgba(0, 0, 0, 0.70);
+    font-size: .8rem;
+    @each $property, $value in $f-regular {
+        #{$property}: $value;
+    };
+    margin-bottom: 3px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+input{
+    border: 1px solid lightgray;
+    @each $property, $value in $f-regular {
+        #{$property}: $value;
+    };
+    padding: 5px;
+    border-radius: 2px;
+    width: min(80vw, 450px);
+    font-size: 1rem;
+}
+
+input[type="datetime-local"]{
+    border: 2px solid $primary-color;
+    color: black;
+    @each $property, $value in $f-regular {
+        #{$property}: $value;
+    };
+    font-size: 1rem;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 4px;
+}
+
+select{
+    border: 2px solid $primary-color;
+    color: black;
+    @each $property, $value in $f-regular {
+        #{$property}: $value;
+    };
+    font-size: 1rem;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 4px;
+}
+
+button{
+    background-color: $primary-color;
+    color: white;
+    @each $property, $value in $f-medium {
+        #{$property}: $value;
+    };
+    font-size: 1rem;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: fit-content;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: ease-in-out .2s;
+}
+
+button:hover{
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: $primary-color;
+    @each $property, $value in $f-regular {
+        #{$property}: $value;
+    };
+}
+
+.main{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.btns{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5vw;
+}
+
+.date-input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px){
+    .btns{
+        display: flex;
+        flex-wrap: wrap;
+        button{
+            margin: 0;
+        }
+    }
+}

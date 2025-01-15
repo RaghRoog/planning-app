@@ -1,0 +1,14 @@
+#register-page, #login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10vh;
+}
+
+#error-disp{
+    @each $property, $value in $f-regular {
+        #{$property}: $value;
+    };
+    color: red;
+}

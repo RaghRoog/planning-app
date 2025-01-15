@@ -1,0 +1,33 @@
+.carousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+
+    button{
+        height: fit-content;
+        margin: 0;
+    }
+
+    .carousel-items{
+        display: flex;
+        gap: 14px;
+        width: 85%;
+        padding: 2px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none; 
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .carousel-btn{
+        display: none;
+    } 
+}
+
